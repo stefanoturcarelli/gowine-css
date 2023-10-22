@@ -70,25 +70,42 @@ body {
     top: 0.625rem; /* 10px converted to rem */
     left: 1.25rem; /* 20px converted to rem */
   }
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 10rem; /* 50px converted to rem */
+		height: 5.5rem; /* 50px converted to rem */
+		background: #451952;
+		border: 1px solid #451952;
+		bottom: 0; 
+		right: 0; 
+	}
+
 }
 
 .glass-sphere-1 svg {
   width: 100%;
   height: 100%;
+	position: relative; /* Adjust positioning */
+  top: 40%; /* Start at the middle of the sphere */
+  transform: translateY(-50%); /* Center vertically */
+
 }
 
 /* -------------------------------------------------------------------------- */
 .editorial {
   display: block;
   width: 100%;
-  height: 8rem;
-  max-height: 8rem;
+  height: 1rem;
+  max-height: 1rem;
   margin: 0;
   z-index: 5;
   bottom: 0;
   position: absolute;
   left: 0px;
   float: left;
+	
 }
 
 .parallax1 > use {
