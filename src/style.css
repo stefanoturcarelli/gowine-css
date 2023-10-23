@@ -4,9 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
 body {
   font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+  padding: 2rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -31,6 +39,44 @@ body {
   max-width: 75rem; /* 1200px converted to rem */
   margin: 0 auto;
   padding: 0 1.25rem; /* 20px converted to rem */
+}
+
+/* -------------------------------------------------------------------------- */
+/* Wine Glass */
+.wine-glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wine {
+	width: 5rem;
+	height: 5rem;
+	background-color: #c7c7c78d;
+	/* border: 0.05rem solid #ffffff98; */
+	border-radius: 0 0 3.125rem 3.125rem;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 5rem;
+		height: 1rem;
+		background-color: #c7c7c7;
+		border-radius: 50%;
+		top: -0.5rem;
+		left: 0;
+		right: 0;
+	}
+}
+.stem {
+  width: 0.5rem; 
+  height: 5rem;
+  background-color: #c7c7c78d;
+	margin-left: 2.2rem;
+	border: 0.1rem solid #ffffff98;
+	border-radius: 0 0 0.625rem 0.625rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -60,6 +106,7 @@ body {
     inset 0 0 1.25rem rgba(0, 0, 0, 0.2);
 
   /* Add light reflection */
+
   &::before {
     content: '';
     position: absolute;
@@ -71,26 +118,24 @@ body {
     left: 1.25rem; /* 20px converted to rem */
   }
 
-	&::after {
-		content: '';
-		position: absolute;
-		width: 10rem; /* 50px converted to rem */
-		height: 5.5rem; /* 50px converted to rem */
-		background: #451952;
-		border: 1px solid #451952;
-		bottom: 0; 
-		right: 0; 
-	}
-
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10rem; /* 50px converted to rem */
+    height: 5.5rem; /* 50px converted to rem */
+    background: #451952;
+    border: 1px solid #451952;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .glass-sphere-1 svg {
   width: 100%;
   height: 100%;
-	position: relative; /* Adjust positioning */
+  position: relative; /* Adjust positioning */
   top: 40%; /* Start at the middle of the sphere */
   transform: translateY(-50%); /* Center vertically */
-
 }
 
 /* -------------------------------------------------------------------------- */
@@ -105,7 +150,6 @@ body {
   position: absolute;
   left: 0px;
   float: left;
-	
 }
 
 .parallax1 > use {
